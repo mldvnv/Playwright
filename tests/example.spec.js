@@ -1,7 +1,6 @@
 const { test, expect } = require("@playwright/test");
-
-test.describe("selectors", () => {
-  const heading = "AQA eShop";
+const heading = "AQA eShop";
+test.describe("CSS selectors", () => {
 
   test("get by - full expression", async ({ page }) => {
     await page.goto("/");
@@ -49,4 +48,13 @@ test.describe("selectors", () => {
       )
     ).toHaveText(heading);
   });
+
+
+    test.describe("built in selectors", () => {
+    test("get by - text", async ({ page }) => {
+
+
+    await expect(page.getByText(heading)).toBeVisible();
+
+    });
 });

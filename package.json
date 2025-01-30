@@ -2,7 +2,9 @@
   "name": "playwright-qa2",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test:headed": "npx playwright --ui"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mldvnv/Playwright.git"
